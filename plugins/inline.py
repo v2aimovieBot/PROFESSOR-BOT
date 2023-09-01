@@ -21,10 +21,12 @@ async def inline_users(query: InlineQuery):
 
 @Client.on_inline_query()
 async def answer(bot, query):
+    """Show search results for given inline query"""
+    
     if not await inline_users(query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='okDa',
+                           switch_pm_text='Hey {query}! 🥴 यह किसी और के द्वारा की गई मूवी रिक्वेस्ट है। कृपया खुद से मूवी रिक्वेस्ट करें।😁',
                            switch_pm_parameter="hehe")
         return
 
@@ -46,8 +48,11 @@ async def answer(bot, query):
 
     offset = int(query.offset or 0)
     reply_markup = get_reply_markup(query=string)
-    files, next_offset, total = await get_search_results(string, file_type=file_type, max_results=10, offset=offset)
-                                                 
+    files, next_offset, total = await get_search_results(string,
+                                                  file_type=file_type,
+                                                  max_results=10,
+                                                  offset=offset)
+
     for file in files:
         title=file.file_name
         size=get_size(file.file_size)
@@ -84,7 +89,7 @@ async def answer(bot, query):
         except Exception as e:
             logging.exception(str(e))
     else:
-        switch_pm_text = f'{emoji.CROSS_MARK} No Results'
+        switch_pm_text = f'{emoji.CROSS_MARK} No results'
         if string:
             switch_pm_text += f' for "{string}"'
 
@@ -96,7 +101,11 @@ async def answer(bot, query):
 
 
 def get_reply_markup(query):
-    buttons = [[InlineKeyboardButton('⟳ ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ', switch_inline_query_current_chat=query)]]
+    buttons = [
+        [
+            InlineKeyboardButton('Search again', switch_inline_query_current_chat=query)
+        ]
+        ]
     return InlineKeyboardMarkup(buttons)
 
 
