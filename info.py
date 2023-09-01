@@ -48,7 +48,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 #maximum search result buttos count in number#
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
-START_MESSAGE = environ.get('START_MESSAGE', '👋 𝙝𝙚𝙡𝙤 {𝙪𝙨𝙚𝙧}\n𝙈𝙮 𝙣𝙖𝙢𝙚 𝙞𝙨 {𝙗𝙤𝙩},\n𝘼𝙙𝙙 𝙢𝙚 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙜𝙧𝙤𝙪𝙥 𝙖𝙣𝙙 𝙢𝙖𝙠𝙚 𝙢𝙚 𝙖𝙙𝙢𝙞𝙣.! \n𝙏𝙝𝙚𝙣 𝙟𝙪𝙨𝙩 𝙩𝙮𝙥𝙚 𝙖 𝙢𝙤𝙫𝙞𝙚𝙨 𝙣𝙖𝙢𝙚 𝙞𝙣 𝙖 𝙜𝙧𝙤𝙪𝙥 𝙖𝙣𝙙 𝙜𝙚𝙩 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙖𝙗𝙡𝙚 𝙛𝙞𝙡𝙚')
+START_MESSAGE = environ.get('START_MESSAGE', '👋 𝙷𝙴𝙻𝙾 {user}\n\n𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 {bot},\n𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽...')
 BUTTON_LOCK_TEXT = environ.get("BUTTON_LOCK_TEXT", "𝙃𝙚𝙮 {𝙦𝙪𝙚𝙧𝙮}! \n🥴 यह किसी और के द्वारा की गई मूवी रिक्वेस्ट है। कृपया खुद से मूवी रिक्वेस्ट करें। 🙏\n𝙏𝙝𝙞𝙨 𝙞𝙨 𝙣𝙤𝙩 𝙮𝙤𝙪𝙧 𝙧𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙈𝙤𝙫𝙞𝙚 \n𝙋𝙡𝙚𝙖𝙨𝙚 𝙧𝙚𝙦𝙪𝙚𝙨𝙩 𝙮𝙤𝙪𝙧 𝙤𝙬𝙣 😎")
 FORCE_SUB_TEXT = environ.get('FORCE_SUB_TEXT', '𝙅𝙤𝙞𝙣 𝙊𝙪𝙧 𝙈𝙤𝙫𝙞𝙚𝙨 𝙐𝙥𝙙𝙖𝙩𝙚 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙏𝙤 𝙐𝙨𝙚 𝙏𝙝𝙞𝙨 𝘽𝙤𝙩.! \n𝙏𝙝𝙚𝙣 𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 🔄 𝙩𝙧𝙮 𝘼𝙜𝙖𝙞𝙣 𝘽𝙪𝙩𝙩𝙤𝙣.\nमूवीज डाउनलोड करने के लिए कृपया हमारे अपडेट चैनल को ज्वॉइन कीजिए 🙏 \nफिर 🔄 𝙩𝙧𝙮 𝙖𝙜𝙖𝙞𝙣 पर क्लिक करें और अपनी मूवीज प्राप्त करें।')
 RemoveBG_API = environ.get("RemoveBG_API", "")
