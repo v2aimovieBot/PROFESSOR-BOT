@@ -1,17 +1,21 @@
+# Kanged From https://github.com/KDBotz/LUCIFER
+
 import pymongo
-from info import DATABASE_URL, DATABASE_NAME
+from info import DATABASE_URI, DATABASE_NAME
 from pyrogram import enums
 import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
-myclient = pymongo.MongoClient(DATABASE_URL)
+myclient = pymongo.MongoClient(DATABASE_URI)
 mydb = myclient["GlobalFilters"]
 
 
 
 async def add_gfilter(gfilters, text, reply_text, btn, file, alert):
     mycol = mydb[str(gfilters)]
+    # mycol.create_index([('text', 'text')])
+
     data = {
         'text':str(text),
         'reply':str(reply_text),
@@ -19,6 +23,7 @@ async def add_gfilter(gfilters, text, reply_text, btn, file, alert):
         'file':str(file),
         'alert':str(alert)
     }
+
     try:
         mycol.update_one({'text': str(text)},  {"$set": data}, upsert=True)
     except:
