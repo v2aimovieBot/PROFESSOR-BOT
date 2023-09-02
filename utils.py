@@ -1,6 +1,6 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORT_URL, SHORT_API
+from info import BLACKLIST_WORDS, AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORT_URL, SHORT_API
 from imdb import Cinemagoer
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
@@ -441,5 +441,16 @@ async def get_shortlink(link):
     except Exception as e:
         logger.error(e)
         return link
+
+def replace_username(text):
+    prohibitedWords = BLACKLIST_WORDS
+    big_regex = re.compile('|'.join(map(re.escape, prohibitedWords)))
+    text = big_regex.sub("", text)
+
+    usernames = re.findall("([@][A-Za-z0-9_]+)", text)
+    for i in usernames:
+        text = text.replace(i, "")
+
+    return text
 
 
