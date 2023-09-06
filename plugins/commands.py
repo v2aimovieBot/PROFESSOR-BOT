@@ -244,10 +244,6 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-        button = InlineKeyboardButton('Youtube Channel ▶️ ', url='https://tapthe.link/Vegpulao')
-        # Create the inline keyboard markup with the button
-    keyboard = InlineKeyboardMarkup([[button]])
-
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
