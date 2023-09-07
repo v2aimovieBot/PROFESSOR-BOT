@@ -276,7 +276,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>👤𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲</b> : {message.from_user.mention}\n<b>🎬 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐟𝐨𝐫</b>: {search}\n<b>Mᴇssᴀɢᴇ Wɪʟʟ Bᴇ Aᴜᴛᴏ Dᴇʟᴇᴛᴇ ɪɴ 𝟸 Mɪɴᴜᴛᴇs Bᴇᴄᴀᴜsᴇ ᴏғ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs\n_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳\n<b>𝐅𝐢𝐥𝐞𝐬 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐝 𝐛𝐲 👇</b>\n⚡ @Pikashow_Movies_Request ⚡<b/>"
+        cap = f"<b>👤𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲</b> : {message.from_user.mention}\n<b>🎬 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐟𝐨𝐫</b>: {search}\n_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳\n<b>𝐉𝐨𝐢𝐧 𝐔𝐬 𝐎𝐧 👇</b>\n⚡@Pikashow_Movies_Request⚡\nMᴇssᴀɢᴇ Wɪʟʟ Bᴇ Aᴜᴛᴏ Dᴇʟᴇᴛᴇ ɪɴ 𝟸 Mɪɴᴜᴛᴇs Bᴇᴄᴀᴜsᴇ ᴏғ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
