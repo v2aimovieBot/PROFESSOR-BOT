@@ -1,4 +1,4 @@
-import asyncio, re, ast, math, logging
+8import asyncio, re, ast, math, logging
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 from utils import get_shortlink, replace_username 
@@ -276,7 +276,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>👤𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲</b> : {message.from_user.mention}\n<b>🎬 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐟𝐨𝐫</b>: {search}\n<b>𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐝 𝐁𝐲</b>:- @Pikashow_Movies_Request\n<b>𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝑾𝒊𝒍𝒍 𝑩𝒆 𝑨𝒖𝒕𝒐 𝑫𝒆𝒍𝒆𝒕𝒆 𝒊𝒏 2 𝑴𝒊𝒏𝒖𝒕𝒆𝒔 𝑩𝒆𝒄𝒂𝒖𝒔𝒆 𝒐𝒇 𝑪𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 𝑰𝒔𝒔𝒖𝒆𝒔<b/>"
+        cap = f"<b>👤𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲</b> : {message.from_user.mention}\n<b>🎬 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐟𝐨𝐫</b>: {search}\n<b>Mᴇssᴀɢᴇ Wɪʟʟ Bᴇ Aᴜᴛᴏ Dᴇʟᴇᴛᴇ ɪɴ 𝟸 Mɪɴᴜᴛᴇs Bᴇᴄᴀᴜsᴇ ᴏғ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs\n_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳_̳\n<b>𝐅𝐢𝐥𝐞𝐬 𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐝 𝐛𝐲 👇</b>\n⚡ @Pikashow_Movies_Request ⚡<b/>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
