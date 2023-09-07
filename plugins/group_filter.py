@@ -161,7 +161,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('This Movie Not Found In DataBase \n यह मूवी फिलहाल उपलब्ध नहीं हैं')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -276,7 +276,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>👤Requested by</b> : {message.from_user.mention}\n<b>🎬 Results for</b>: {search}\n<b>Provided By</b>:- @All_Movie_Request_groups\n<b>After 2 min this message will be automatically Delete Because of Copyright Issues.<b/>"
+        cap = f"<b>👤𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲</b> : {message.from_user.mention}\n<b>🎬 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐟𝐨𝐫</b>: {search}\n<b>𝐏𝐫𝐨𝐯𝐢𝐝𝐞𝐝 𝐁𝐲</b>:- @Pikashow_Movies_Request\n<b>𝑴𝒆𝒔𝒔𝒂𝒈𝒆 𝑾𝒊𝒍𝒍 𝑩𝒆 𝑨𝒖𝒕𝒐 𝑫𝒆𝒍𝒆𝒕𝒆 𝒊𝒏 2 𝑴𝒊𝒏𝒖𝒕𝒆𝒔 𝑩𝒆𝒄𝒂𝒖𝒔𝒆 𝒐𝒇 𝑪𝒐𝒑𝒚𝒓𝒊𝒈𝒉𝒕 𝑰𝒔𝒔𝒖𝒆𝒔<b/>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
