@@ -121,7 +121,7 @@ clear_junk_group - clear add removed group or deactivated groups on db
 
 ## TELAGRAM SUPPORT 
 
-* [![𝗦𝗛𝗔𝗛𝗢](https://img.shields.io/static/v1?label=SHAHO&message=BOTZ&color=critical)](https://telegram.me/All_Movie_Request_groups)
+* [![𝗦𝗛𝗔𝗛𝗢](https://img.shields.io/static/v1?label=SHAHO&message=BOTZ&color=critical)](https://telegram.me/Pikashow_Movies_Request)
 
 ## Disclaimer
 [![GNU Affero General Public License 2.0](https://www.gnu.org/graphics/agplv3-155x51.png)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
